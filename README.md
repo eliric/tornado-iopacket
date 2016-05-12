@@ -1,10 +1,12 @@
 # tornado-iopacket
 packet(udp,raw_socket etc) based io support for tornado<br>
 coroutine is supported as well<br>
+
 # Usage:
 <br>
 
-import socket
+```python
+from socket import *
 import iopacket
 import tornado.gen
 
@@ -20,3 +22,4 @@ def write(data, dest_ip, port):
 @tornado.gen.coroutine
 def read():
     data, address = yield sock.read()
+```
